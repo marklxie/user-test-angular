@@ -6,12 +6,14 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UserlistComponent } from './Users/userlist/userlist.component';
+import { UserEditComponent } from './Users/user-edit/user-edit.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    UserlistComponent
+    UserlistComponent,
+    UserEditComponent
   ],
   imports: [
     BrowserModule,

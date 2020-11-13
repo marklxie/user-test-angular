@@ -19,7 +19,14 @@ export class UserService {
     return this.http.get(`${baseurl}`) as Observable<User[]>;
   }
 
-  getUser(user: User): Observable<User>{
-    return this.http.get(`${baseurl}/${user.id}`) as Observable<User>;
+  getUser(num: number): Observable<User>{
+    return this.http.get(`${baseurl}/${num}`) as Observable<User>;
+  }
+
+  put(user: User):Observable<any>{
+    return this.http.put(`${baseurl}/${user.id}`,user) as Observable<any>;
+  }
+  create(user: User):Observable<any>{
+    return this.http.post(`${baseurl}`, user) as Observable<any>;
   }
 }

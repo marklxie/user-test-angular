@@ -1,0 +1,65 @@
+<div class="angular-component"></div>
+<h3>User Edit<h3>
+  <table *ngIf="user" class="table table-sm">
+         <tr>
+            <td>Id</td>
+            <td>
+                <input [(ngModel)]="user.id" type="text" size="10" disabled>
+            </td>
+        </tr>
+         <tr>
+            <td>Firstname</td>
+            <td>
+                <input [(ngModel)]="user.firstname" type="text" size="15">
+            </td>
+        </tr>
+        <tr>
+            <td>Lastname</td>
+            <td>
+                <input [(ngModel)]="user.lastname" type="text" size="15">
+            </td>
+        </tr>
+        <tr>
+            <td>Username</td>
+            <td>
+                <input [(ngModel)]="user.username" type="text" size="15">
+            </td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td>
+                <input [(ngModel)]="user.password" type="password" size="15">
+            </td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td>
+                <input [(ngModel)]="user.email" type="text" size="15">
+            </td>
+        </tr>
+        <tr>
+            <td>Phone</td>
+            <td>
+                <input [(ngModel)]="user.phone" type="text" size="15">
+            </td>
+        </tr>
+        <tr>
+            <td>IsReviewer</td>
+            <td>
+                <input [(ngModel)]="user.isReviewer" type="checkbox" size="10">
+            </td>
+        </tr>
+        <tr>
+            <td>IsAdmin</td>
+            <td>
+                <input [(ngModel)]="user.isAdmin" type="checkbox" size="10">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2"> 
+                <button (click)="save()">Save</button>
+            </td>
+        </tr>
+    </table> 
+
+<span *ngIf="!user">User does not exist</span>
