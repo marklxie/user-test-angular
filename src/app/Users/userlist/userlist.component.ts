@@ -12,6 +12,20 @@ export class UserlistComponent implements OnInit {
   constructor(private userser: UserService) { }
 
   users: User[] = [];
+  searchCriteria: string ="";
+  sortCriteria: string ="id"
+  ascSequence:boolean = true;
+
+  sortColumn(column: string): void{
+    if(column == this.sortCriteria){
+      this.ascSequence = !this.ascSequence;
+      console.log((this.ascSequence)? "Changed to Asc" : "Changed to Desc");
+      return;
+    }
+    this.sortCriteria = column;
+    console.log("Changed columns");
+    this.ascSequence = true;
+  }
 
   ngOnInit(): void {
     this.userser.list().subscribe(
